@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class=" theme-red">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的生活</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/light7.min.css">
+    <link rel="stylesheet" href="css/light7-swiper.min.css">
+    <link rel="stylesheet" href="css/light7-swipeout.css">
+    <link rel="stylesheet" href="css/app.css">
+    <style>
+        .card-header {
+            height: 10rem;
+            overflow: hidden;
+        }
+        #divPageLoading{
+            display: flex;
+            display: -webkit-flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    </style>
+    <script>
+        function showPage(){
+            $('#divPageLoading').hide();
+            $('#wrap').show();
+        }
+    </script>
+</head>
+<body onload="showPage()">
+<!--loading页面-->
+<div id="divPageLoading">
+    <h1>加载中。。。</h1>
+</div>
+<!--主页面-->
+<div id="wrap" style="display: none">
+    <!-----------------底部工具栏--------------->
+    <nav class="bar bar-tab">
+        <a class="tab-item active no-transition" href='#page-home'>
+            <span class="icon icon-home"></span>
+            <span class="tab-label">Home</span>
+        </a>
+        <a class="tab-item no-transition" href="#page-goods">
+            <span class="icon icon-app"></span>
+            <span class="tab-label">Shops</span>
+            <span class="badge">2</span>
+        </a>
+        <a class="tab-item no-transition" href="#page-settings">
+            <span class="icon icon-me"></span>
+            <span class="tab-label">Me</span>
+        </a>
+    </nav>
+    <!-----------------tab1-page------------------->
+    <div class="page page-home page-current" id="page-home">
+        <header class="bar bar-nav">
+            <a class="icon icon-settings pull-left open-panel"></a>
+            <a class="button button-link button-nav pull-right open-popup" data-popup=".popup-about">
+                About
+                <span class="icon icon-menu"></span>
+            </a>
+            <h1 class="title">Light7 Mall</h1>
+        </header>
+        <!--下拉刷新+滚动容器-->
+        <div class="content pull-to-refresh-content page-home infinite-scroll">
+            <!--下拉状态标识符-->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <!--产品列表-->
+            <div class="page-home-list">
+
+            </div>
+            <!--滚动加载标识符-->
+            <div class="infinite-scroll-preloader">
+                <div class="preloader"></div>
+            </div>
+            <div style='display:none' id='index-tpl'>
+                <a href='detail.html'>
+                    <div class="card color-default">
+                        <div style="" valign="bottom" class="card-header color-white no-border no-padding">
+                            <img class='card-cover' src="//gd4.alicdn.com/bao/uploaded/i4/TB13mgfHpXXXXcVXFXXXXXXXXXX_!!2-item_pic.png_640x640.jpg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                <p>My Pillow Classic Series Bed Pillow - Standard/Queen King Pillows</p>
+                                <p class="color-gray">@2015/01/15</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="link">Like(120)</span>
+                            <span class="link">Comments(20)</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------tab2-page------------------->
+    <div id="page-goods" class="page page-goods">
+        <!--滚动容器-->
+        <div class="content infinite-scroll">
+            <!--banner-->
+            <div class="swiper-container swiper-container-horizontal" data-space-between="10">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class='card-cover' src="//gdp.alicdn.com/bao/uploaded/i1/TB1kzlgHVXXXXbtXpXXXXXXXXXX_!!0-item_pic.jpg_640x640.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class='card-cover' src="//gdp.alicdn.com/bao/uploaded/i2/TB1mEnmHXXXXXXHapXXXXXXXXXX_!!0-item_pic.jpg_640x640.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class='card-cover' src="//gdp.alicdn.com/bao/uploaded/i4/TB13mgfHpXXXXcVXFXXXXXXXXXX_!!2-item_pic.png_640x640.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+            </div>
+            <!--产品列表-->
+            <div class="list-block media-list">
+                <ul class="ajaxContent">
+
+                </ul>
+            </div>
+            <!--加载标识符-->
+            <div class="infinite-scroll-preloader">
+                <div class="preloader"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------tab2-page------------------->
+    <div id="page-settings" class="page page-settings">
+        <header class="bar bar-nav">
+            <h1 class="title">Settings</h1>
+        </header>
+
+        <div class="content">
+            <div class="page-settings">
+                <div class="list-block media-list person-card">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="80"></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">Mr Potato</div>
+                                    </div>
+                                    <div class="item-subtitle">Time is money</div>
+                                    <div class="item-text"><strong>528</strong> Follow</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row text-center">
+                    <div class="col-25">
+                        <h4>12</h4>
+                        <div class="color-gray">in Cart</div>
+                    </div>
+                    <div class="col-25">
+                        <h4>5</h4>
+                        <div class="color-gray">Sent</div>
+                    </div>
+                    <div class="col-25">
+                        <h4>2</h4>
+                        <div class="color-gray">Delivery</div>
+                    </div>
+                    <div class="col-25">
+                        <h4>85</h4>
+                        <div class="color-gray">Comments</div>
+                    </div>
+                </div>
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content item-link">
+                            <div class="item-media"><i class="icon icon-settings"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">Account</div>
+                            </div>
+                        </li>
+                        <li class="item-content item-link">
+                            <div class="item-media"><i class="icon icon-me"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">Me</div>
+                            </div>
+                        </li>
+                        <li class="item-content item-link">
+                            <div class="item-media"><i class="icon icon-message"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">Noti</div>
+                            </div>
+                        </li>
+                        <li class="item-content item-link">
+                            <div class="item-media"><i class="icon icon-star"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">Fav</div>
+                            </div>
+                        </li>
+                        <li class="item-content item-link">
+                            <div class="item-media"><i class="icon icon-friends"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">Help</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <a href="index.html" class="button button-big button-fill button-danger external">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------popup------------------->
+    <div class="popup popup-about">
+        <div class="content-block">
+            <h2 class="text-center">About Light7 Mall</h2>
+            <p>It's a demo webapp of Light7.</p>
+            <p><a href="#" class="button close-popup">OK</a></p>
+        </div>
+    </div>
+
+    <!-----------------panel------------------->
+    <div class="panel-overlay"></div>
+    <!-- Left Panel with Reveal effect -->
+    <div class="panel panel-left panel-reveal" id='panel-themes'>
+        <div class="content-block">
+            <p>Themes</p>
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label" style='width: 60%;'>Night Mode</div>
+                                <div class="item-input">
+                                    <label class="label-switch">
+                                        <input type="checkbox" id="dark-switch">
+                                        <div class="checkbox"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript' src='js/jquery.min.js' charset='utf-8'></script>
+<script>
+    $.config = {
+//        router : false
+    }
+</script>
+<script type='text/javascript' src='js/light7.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/light7-swiper.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/light7-swipeout.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/myApp.js' charset='utf-8'></script>
+</body>
+</html>

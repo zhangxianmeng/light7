@@ -1,56 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html class=" theme-red">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>图片加载技术实例-欢迎关注tinyphp的博客</title>
-    <script src="js/jquery.min.js" type=text/javascript></script>
-    <script src="js/jquery.lazyload.min.js" type=text/javascript></script>
-    <script type="text/javascript" charset="utf-8">
-        $(function() {
-           var imgLazuLoad = $("img.lazy");
-            $.each(imgLazuLoad,function(){
-                var src = $(this).attr('src');
-                $(this).attr('data-original',src);
-                $(this).attr('src','img/loading.gif');
-            })
-            imgLazuLoad.css({
-                'width':'500px',
-                'height':'500px'
-            });
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的生活</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!--<link rel="shortcut icon" href="/favicon.ico">-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-            imgLazuLoad.lazyload({
-                placeholder : "img/loading.gif",
-                effect: "fadeIn"
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="css/light7.min.css">
+    <link rel="stylesheet" href="css/light7-swiper.min.css">
+    <link rel="stylesheet" href="css/light7-swipeout.css">
+    <link rel="stylesheet" href="css/app.css">
     <style>
-        img a,img{border:0px;}
-        div{ margin-bottom:10px;}
+        .content {
+            color: #999;
+        }
+        .button.button-fill.button-big {
+            line-height: 2.0rem;
+            height: 2.0rem;
+        }
+        .list-block {
+            margin: .75rem;
+        }
+        .content-block {
+            margin: .75rem 0;
+        }
+        .signup a {
+            color: #999;
+        }
     </style>
 </head>
 <body>
-<!--<img src="img/01.jpg" /><br />-->
-<div><a href="#"><img class="lazy" src="img/01.jpg"></a></div>
-<div><a href="#"><img class="lazy" src="img/02.jpg"></a></div>
-<div><a href="#"><img class="lazy" src="img/03.jpg"></a></div>
-<div><a href="#"><img class="lazy" src="img/04.jpg"></a></div>
-<div><a href="#"><img class="lazy" src="img/05.jpg"></a></div>
-<div><a href="#"><img class="lazy" src="img/06.jpg"></a></div>
-<div><a href="#"><img class="lazy" src="img/07.jpg"></a></div>
-<div><a href="#"><img class="lazy" src="img/08.jpg"></a></div>
+<div class="page">
+    <header class="bar bar-nav">
+        <h1 class="title">Login</h1>
+    </header>
+    <div class="content">
+        <div class="page-login">
+            <div class="list-block inset text-center">
+                <h3>Login Light7 Mall</h3>
+                <ul>
+                    <!-- Text inputs -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-name"></i></div>
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <input type="text" placeholder="Username/Email">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-email"></i></div>
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <input type="password" placeholder="Password">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <p><a class="button button-big button-fill external" href='home.html' data-transition='fade'>Login</a></p>
+                <p class='text-center signup'>
+                    <a href="#" class='pull-left'>No Accout?</a>
+                    <a href="#" class='pull-right'>Forget Password?</a>
+                </p>
+                <div class="leader">Other login</div>
+                <div class="row others">
+                    <a class="col-33"> <img src="http://gtms04.alicdn.com/tps/i4/TB1n75bIFXXXXaMXXXXgYS7HVXX-96-144.png" alt="" width='60'></a>
+                    <a class="col-33"> <img src="http://gtms03.alicdn.com/tps/i3/TB1fN1XIFXXXXbEXXXX8oekJXXX-98-149.png" alt="" width='61'></a>
+                    <a class="col-33"> <img src="http://gtms02.alicdn.com/tps/i2/TB16fh8IFXXXXXdXpXXEs40ZFXX-105-147.png" alt="" width='64'></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 
+<script type='text/javascript' src='js/jquery.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/light7.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/light7-swiper.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/light7-swipeout.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/myApp.js' charset='utf-8'></script>
+<script>
+</script>
+<script>
 
-<!--<div><a href="#"><img src="images/loading.gif" data-original="images/1.jpg"></a></div>-->
-<!--<div><a href="#"><img src="images/loading.gif" data-original="images/2.jpg"></a></div>-->
-<!--<div><a href="#"><img src="images/loading.gif" data-original="images/3.jpg"></a></div>-->
-<!--<div><a href="#"><img src="images/loading.gif" data-original="images/4.jpg"></a></div>-->
-<!--<div><a href="#"><img src="images/loading.gif" data-original="images/5.jpg"></a></div>-->
-<!--<div><a href="#"><img src="images/loading.gif" data-original="images/6.jpg"></a></div>-->
-<!--<div><a href="#"><img src="images/loading.gif" data-original="images/7.jpg"></a></div>-->
-<!--<div><a href="#"><img src="images/loading.gif" data-original="images/8.jpg"></a></div>-->
-<!--<div><a href="#"><img src="images/loading.gif" data-original="images/9.jpg"></a></div>-->
-<!--<div><a href="#"><img src="images/loading.gif" data-original="images/10.jpg"></a></div>-->
+</script>
 </body>
 </html>
